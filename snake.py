@@ -19,6 +19,7 @@ snake = [vector(10, 0)]
 aim = vector(0, -10)
 colors = ["green","orange","purple","yellow","blue"]
 serpiente = colors[randrange(len(colors))]
+comida = colors[randrange(len(colors))]
 
 
 def change(x, y):
@@ -56,7 +57,7 @@ def move():
     for body in snake:
         square(body.x, body.y, 9, serpiente)
 
-    square(food.x, food.y, 9, 'green')
+    square(food.x, food.y, 9, comida)
     update()
     ontimer(move, 100)
 
